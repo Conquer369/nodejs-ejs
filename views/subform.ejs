@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<% include nav %>
+<p>METHOD: GET</p>
+<form name="get">
+    用户名：<input type="text" name="txtUserName" />
+    密码：<input type="password" name="txtUserPwd" />
+    <input type="submit" value="提交">
+</form>
+<p>METHOD: POST</p>
+<form method="post" name="post">
+    用户名：<input type="text" name="txtUserName" />
+    密码：<input type="password" name="txtUserPwd" />
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
