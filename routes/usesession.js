@@ -18,7 +18,7 @@ router.get('/', function(req, res) {
     POST
  */
 router.post('/', function(req, res) {
-    req.session.islogin = 'success';// 关闭浏览器后会自动删除已设置的sid
+    req.session.islogin = 'success';// 关闭浏览器后会自动删除已设置的sid，因为没有设置有效时间
     res.locals.islogin = req.session.islogin;
 
     res.render('usesession', { title: '使用session示例' });

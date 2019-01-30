@@ -4,7 +4,6 @@ var router = express.Router();
 /*
     1、表单请求会刷新页面？
     2、bodyParser（json、urlencoded、multipart）分别做什么的？
-    3、
  */
 
 /*
