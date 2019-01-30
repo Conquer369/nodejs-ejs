@@ -20,19 +20,20 @@ router.get('/', function(req, res) {
 /*
     POST
  */
-router.post('/',function(req, res){
+router.post('/', function(req, res){
     console.log(req.files[0]);  // 上传的文件信息
     var dirArr = __dirname.split("\\");
     dirArr.pop();
     var desFile = dirArr.join("\\") + "/public/uploadimg/" + req.files[0].originalname;
     var response = null;
+
     console.log(desFile);
 
-    fs.readFile( req.files[0].path, function (err, data) {
+    fs.readFile(req.files[0].path, function (err, data) {
         fs.writeFile(desFile, data, function (err) {
-            if( err ){
-                console.log( err );
-            }else{
+            if(err) {
+                console.log(err);
+            } else {
                 response = {
                     message: 'File uploaded successfully',
                     filename: req.files[0].originalname,
