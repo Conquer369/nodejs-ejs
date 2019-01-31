@@ -24,7 +24,7 @@ router.post('/', function(req, res){
     console.log(req.files[0]);  // 上传的文件信息
     var dirArr = __dirname.split("\\");
     dirArr.pop();
-    var desFile = dirArr.join("\\") + "/public/uploadimg/" + req.files[0].originalname;
+    var desFile = dirArr.join("\\") + "\\public\\uploadimg\\" + req.files[0].originalname;
     var response = null;
 
     console.log(desFile);

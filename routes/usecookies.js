@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 /*
-    1、关闭浏览器cookie消失？
+    1、关闭浏览器cookie消失？ Edge浏览器无法完成自动登录。
  */
 
 /*
@@ -30,7 +30,7 @@ router.post('/', function(req, res) {
     req.session.islogin = 'success';// 关闭浏览器后会自动删除已设置的sid
     res.locals.islogin = req.session.islogin;
 
-    res.cookie('islogin', 'success', { maxAge: 600000});
+    res.cookie('islogin', 'success', { maxAge: 60000});
 
     res.render('usecookies', { title: '使用cookies示例' });
 });

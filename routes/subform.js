@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 /*
-    1、表单请求会刷新页面？
-    2、bodyParser（json、urlencoded、multipart）分别做什么的？
+    1、表单请求会刷新页面？ 表单提交无论是get还是post都会刷新页面。
+    2、bodyParser（json、urlencoded、multipart）分别做什么的？ 4版本废除bodyParser，仅支持json、urlencoded。
  */
 
 /*
